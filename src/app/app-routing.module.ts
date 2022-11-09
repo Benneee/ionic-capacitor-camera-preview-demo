@@ -8,12 +8,16 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'payment',
     pathMatch: 'full'
   },
   {
     path: 'preview',
     loadChildren: () => import('./preview/preview.module').then( m => m.PreviewPageModule)
+  },
+  {
+    path: 'payment',
+    loadChildren: () => import('./payment/payment.module').then( m => m.PaymentPageModule)
   },
 ];
 
